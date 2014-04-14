@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html lang="zh-cn">
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="https://cn.avoscloud.com/scripts/lib/av-0.3.1.min.js"></script>
+<script src="../js/User.js"></script>
+
+<script language="JavaScrip" type="text/javascript">
+function Sign_Onclick()
+{
+var user = new AV.User();
+
+user.set("username", "qer");
+
+user.set("password", "123456781");
+
+user.set("email", "email@exam1p1t.com");
+
+user.set("phone", "415-392-02021");
+
+
+user.signUp(null, {
+  
+success: function(user) {
+
+    alert
+("success!!")  },
+  
+error: function(user, error) {
+
+   alert("Error: " + error.code + " " + error.message);
+  }
+});
+};
+
+function qqLogIn(username,password)
+{
+    alert(username+"\n"+password);
+    AV.User.logIn(username,password,{
+        success:function(user)
+        {   
+            alert("登录成功!!");
+        },
+        error:function(user,error){
+            alert("error:"+error.code+"\n message:"+error.message);
+
+        }
+    });
+    return true;
+};
+
+</script>
+    <title>Hello WORLD!DDDDDDD</title>
+    <meta  name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css">
+</head>
+
+
+<body onload="Initialize()">
+
+
+<form name="reg_form"  class="form-horizontal" role="form">
+    <div class="form-group">
+        <label for="inputUserName" class="col-sm-2 control-label">UserName</label>
+        <div class="col-sm-5">
+            <input type="text" class="form-control" id="inputUserName" placeholder="UserName">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="inputPassword" class="col-sm-2 control-label">Password</label>
+        <div class="col-sm-5">
+            <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <button  class="btn btn-default" onclick="qqLogIn(inputUserName.value,inputPassword.value)">
+             登录
+            </button>
+
+        </div>
+    </div>
+
+</form>
+<p><a  class="btn btn-primary btn-lg" role="button" onclick="return Sign_Onclick()">
+注册
+</a>
+</p>
+
+<script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html lang="zh-cn">
+<head>
+<style type="text/css">
+    body{
+        margin: 10px auto; 
+        padding-top:60px; 
+    };
+</style>
+<script src="https://cn.avoscloud.com/scripts/lib/av-0.3.1.min.js"></script>
+<script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript" src="./js/myuser.js"></script>
+<script type="text/javascript" src="./js/User.js"></script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>主页</title>
+    <meta  name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css">
+</head>
+
+<body onload="Initialize()">
+
+<nav class="navbar  navbar-fixed-top navbar-inverse" role="navigation">
+<div class="container">
+    <div class="row">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand " id="myindex" href="#">我的公司</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+            <li class="active" id="f1"><a href="#">明天</a></li>
+            <li id="f2"><a href="#" >今天</a></li>
+        </ul>
+        <ul class="nav navbar-nav pull-right">
+            <li id="user_register"><a href="#">注册</a></li>
+            <li id="user_login"><a href="#">登录</a></li>
+
+        <li class="dropdown" id="user_count">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" id="count">我的账号 <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li id="f3"><a href="#">我的信息</a></li>
+          <li><a href="#">我的网站</a></li>
+          <li><a href="#">充值</a></li>
+          <li id="user_logout"><a href="#">注销</a></li>
+          <li class="divider"></li>
+          <li><a href="#">One more separated link</a></li>
+        </ul>
+      </li>
+
+        </ul>
+
+
+     </div>
+    </div>
+</div>
+</nav>
+
+<div>
+  <iframe src="./html/fram.htm" id="mainIframe" frameborder="0" scrolling="no" width="100%" height="1000px"></iframe>
+</div>
+
+
+
+<footer>
+    <p>Posted by: AAS</p>
+  <p><time pubdate datetime="2012-03-01"></time></p>
+</footer>
+
+
+<script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
+
+</body>
+</html>

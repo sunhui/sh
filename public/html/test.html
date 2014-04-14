@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta  name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css">
+    <script type="text/javascript" src="../js/jquery-1.11.0.min.js"></script>
+	<title>hello world!</title>
+
+	<script>
+	$("document").ready(function(){
+		$("button").click(function(){
+			alert("aaaaaa");
+			$(".carousel").carousel();
+			
+		});
+				
+	});
+	</script>
+</head>
+<body>
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item active">
+      <img src="../images/1.jpg" alt="bad image">
+      <div class="carousel-caption">
+       <h1>first image!</h1>
+      </div>
+     </div>
+
+    <div class="item">
+      <img src="../images/2.jpg" alt="bad image">
+      <div class="carousel-caption">
+       <h1>second image!</h1>
+      </div>
+     </div>
+
+    <div class="item">
+      <img src="../images/3.jpg" alt="bad image">
+      <div class="carousel-caption">
+       <h1>third image!</h1>
+      </div>
+     </div>
+  
+  </div>
+
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+  <span class="glyphicon glyphicon-chevron-left"></span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+  </a>
+</div>
+<div class="container">
+<div class="row">
+<div>
+	<button>button</button>
+</div>
+</div>
+</div>
+
+
+
+</body>
+</html>
